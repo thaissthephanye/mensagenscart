@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Filtrando Mensagens</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<h3>Mensagens dos cartões</h3>
+	<ol>
+		<li>Parabéns pelo seu aniversário!</li>
+		<li>Muitas felicidades pelo seu aniversário.</li>
+		<li>Felicidade e muitos anos de vida.</li>
+		<li>Seja bem-vindo!</li>
+		<li>Feliz Natal e próspero ano novo.</li>
+	</ol>
+
+  <button id="btn">Mensagens de felicitações</button>
+  
+  <style>
+  
+  ol {
+    background: #492e2e;
+    padding: 20px;
+    }
+    
+  ol li {
+    background: #918080;
+    padding: 5px;
+    margin-left: 35px;
+    }
+  
+  <style/>
+
+
+	<script>
+  const mensagens = [
+  { id: 1, nome: 'Parabéns pelo seu aniversário!', categoria: 'aniv' },
+  { id: 2, nome: 'Muitas felicidades pelo seu aniversário.', categoria: 'aniv' },
+  { id: 3, nome: 'Felicidades e muitos anos de vida.', categoria: 'aniv' },
+  { id: 4, nome: 'Seja bem-vindo', categoria: 'bvind' },
+  { id: 5, nome: 'Feliz Natal e próspero ano novo.', categoria: 'anonov' }
+]
+const felicit = mensagens.filter(mensagens => mensagens.categoria === 'aniv');
+console.log('Mensagens de felicitação pelo aniversário')
+console.log(felicit.map(felicit => felicit.nome))
+
+function exibirMensagem()
+        {
+            var resultado = new Date();
+            alert(felicit.map(felicit => felicit.nome));
+        }
+ 
+        
+        var btn = document.getElementById("btn");
+ 
+        btn.addEventListener("click", exibirMensagem);
+
+	</script>
+
+
+</body>
+
+</html>
